@@ -2,6 +2,8 @@
 
 Ripple Spread view,Spread outside the widget rect!
 
+![Markdown](./device-2016-10-22-205519.gif)
+
 #### This is a module of Android Studio Project;
 
 Feel free and help yourself!
@@ -12,15 +14,15 @@ Feel free and help yourself!
 
     xmlns:halohoop="http://schemas.android.com/apk/res-auto"
 
-    <com.halohoop.clicktospreadview.ClickToSpreadView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        halohoop:end_radius="720"
-        halohoop:stroke_color="#00f"
-        halohoop:start_stroke_width="100"
-        halohoop:animation_duration="1000"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true">
+		<com.halohoop.clicktospreadview.ClickToSpreadView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    halohoop:end_radius="720"
+		    halohoop:stroke_color="#00f"
+		    halohoop:start_stroke_width="100"
+		    halohoop:animation_duration="1000"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentBottom="true">
 
         <TextView
             android:background="#8e8e8e"
@@ -29,7 +31,8 @@ Feel free and help yourself!
             android:padding="20dp"
             android:text="halohoop"
             android:id="@+id/textView" />
-    </com.halohoop.clicktospreadview.ClickToSpreadView>
+
+    	</com.halohoop.clicktospreadview.ClickToSpreadView>
 
 ## License
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClickToSpreadView">
+        <attr name="start_stroke_width" format="float" />
+        <attr name="stroke_color" format="color" />
+        <attr name="animation_duration" format="float" />
+        <attr name="end_radius" format="float" />
+    </declare-styleable>
+</resources>

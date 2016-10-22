@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:halohoop="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.halohoop.clicktospreadview_demo.MainActivity">
+
+    <com.halohoop.clicktospreadview.ClickToSpreadView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        halohoop:end_radius="720"
+        halohoop:stroke_color="#00f"
+        halohoop:start_stroke_width="100"
+        halohoop:animation_duration="1000"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:background="#8e8e8e"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="halohoop"
+            android:id="@+id/textView" />
+    </com.halohoop.clicktospreadview.ClickToSpreadView>
+</RelativeLayout>

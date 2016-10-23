@@ -124,7 +124,7 @@ public class ClickToSpreadView extends FrameLayout {
                 }
                 break;
         }
-        return false;
+        return super.dispatchTouchEvent(event);
     }
 
     private class RippleView extends View {

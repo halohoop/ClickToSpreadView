@@ -176,9 +176,7 @@ public class ClickToSpreadView extends FrameLayout {
             rippleAnim.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationStart(Animator animation) {
-                    if (mActivity.isFinishing()) {
-                        mWm.addView(RippleView.this, mLayoutParams);
-                    }
+                    mWm.addView(RippleView.this, mLayoutParams);
                 }
 
                 @Override

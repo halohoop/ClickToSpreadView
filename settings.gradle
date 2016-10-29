@@ -1,1 +1,1 @@
-include ':ClickToSpreadView-lib', ':ClickToSpreadView-demo'
+include ':ClickToSpreadView-lib', ':ClickToSpreadView-demo', ':ClickToSpreadView-demo1'

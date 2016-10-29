@@ -1,21 +1,13 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'//添加
-//添加
-publish {
-    userOrg = 'halohoop'//bintray.com用户名
-    groupId = 'com.halohoop'//jcenter上的路径
-    artifactId = 'clicktospreadview'//项目名称
-    publishVersion = '1.0.3'//版本号
-    desc = 'Ripple Spread view,Spread outside the widget rect!'//描述，不重要
-    website = 'https://github.com/halohoop/clicktospreadview'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
-}
+apply plugin: 'com.android.application'
+
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
+        applicationId "com.halohoop.clicktospreadview_demo1"
         minSdkVersion 23
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
 
@@ -28,10 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
-    }
-
 }
 
 dependencies {
@@ -41,4 +29,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.halohoop:clicktospreadview:1.0.3'
 }

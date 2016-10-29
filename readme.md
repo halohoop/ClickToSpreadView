@@ -10,7 +10,7 @@ Feel free and help yourself!
 
 ## Usage
 
-* compile 'com.halohoop:clicktospreadview:1.0.2'
+* compile 'com.halohoop:clicktospreadview:1.0.3'
 
     xmlns:halohoop="http://schemas.android.com/apk/res-auto"
 

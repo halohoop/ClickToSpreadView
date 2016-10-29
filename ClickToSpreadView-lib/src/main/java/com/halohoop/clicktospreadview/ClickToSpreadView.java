@@ -15,6 +15,7 @@ package com.halohoop.clicktospreadview;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -46,6 +47,7 @@ public class ClickToSpreadView extends FrameLayout {
     private float mRippleEndRadius = DEFAULT_END_RADIUS;
     private final static float DEFAULT_START_STROKE_WIDTH = 100;
     private float mStartStrokeWidth = DEFAULT_START_STROKE_WIDTH;
+    private Activity mActivity;
 
     public ClickToSpreadView(Context context) {
         this(context, null);
@@ -57,6 +59,7 @@ public class ClickToSpreadView extends FrameLayout {
 
     public ClickToSpreadView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mActivity = (Activity) context;
         this.mContext = context;
         initAttr(context, attrs);
         init();
@@ -173,12 +176,16 @@ public class ClickToSpreadView extends FrameLayout {
             rippleAnim.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationStart(Animator animation) {
-                    mWm.addView(RippleView.this, mLayoutParams);
+                    if (mActivity.isFinishing()) {
+                        mWm.addView(RippleView.this, mLayoutParams);
+                    }
                 }
 
                 @Override
                 public void onAnimationEnd(Animator animation) {
-                    mWm.removeView(RippleView.this);
+                    if (RippleView.this.isAttachedToWindow()) {
+                        mWm.removeView(RippleView.this);
+                    }
                 }
             });
             rippleAnim.start();
